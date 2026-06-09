@@ -6,6 +6,7 @@ import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
+import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="max-w-6xl mx-auto px-6">
+      <main className="max-w-6xl mx-auto px-4 md:px-6">
         <Hero />
         <About />
         <Skills />
@@ -24,6 +25,8 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      <ScrollToTop />
     </>
   );
 }

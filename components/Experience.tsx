@@ -9,17 +9,24 @@ export default function Experience() {
 
             {/* meldCX */}
             <div className="bg-slate-800 p-8 rounded-xl border border-slate-700">
-                <h3 className="text-2xl font-bold">
-                    Junior Software QA Engineer
-                </h3>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
 
-                <p className="text-sky-400 font-semibold mt-1">
-                    meldCX
-                </p>
+                    <div>
+                        <h3 className="text-xl md:text-2xl font-bold">
+                            Junior Software QA Engineer
+                        </h3>
 
-                <p className="text-gray-400 mb-6">
-                    October 2025 - Present
-                </p>
+                        <p className="text-sky-400 font-semibold mt-1">
+                            meldCX
+                        </p>
+                    </div>
+
+                    <p className="text-gray-400 mt-2 md:mt-0">
+                        October 2025 - Present
+                    </p>
+
+                </div>
+
 
                 <div className="space-y-6">
                     <h4 className="text-xl font-semibold text-white mb-4">
@@ -71,17 +78,24 @@ export default function Experience() {
 
             {/* AKIJ iBOS */}
             <div className="bg-slate-800 p-8 rounded-xl border border-slate-700">
-                <h3 className="text-2xl font-bold">
-                    Junior Software QA Engineer
-                </h3>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
 
-                <p className="text-sky-400 font-semibold mt-1">
-                    AKIJ iBOS
-                </p>
+                    <div>
+                        <h3 className="text-xl md:text-2xl font-bold">
+                            Junior Software QA Engineer
+                        </h3>
 
-                <p className="text-gray-400 mb-6">
-                    November 2024 - September 2025
-                </p>
+                        <p className="text-sky-400 font-semibold mt-1">
+                            AKIJ iBOS
+                        </p>
+                    </div>
+
+                    <p className="text-gray-400 mt-2 md:mt-0">
+                        November 2024 - September 2025
+                    </p>
+
+                </div>
+
 
                 <div className="space-y-6">
                     <h4 className="text-xl font-semibold text-white mb-4">
