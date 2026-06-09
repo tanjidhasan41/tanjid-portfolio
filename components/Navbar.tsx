@@ -73,7 +73,7 @@ export default function Navbar() {
                     Tanjid Ibna Akid
                 </span>
 
-                <span className="font-bold text-xs md:text-sm text-sky-400">
+                <span className="font-bold text-xs md:text-sm text-gray-400">
                     Software QA Engineer
                 </span>
             </a>

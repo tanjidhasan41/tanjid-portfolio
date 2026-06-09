@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
     return (
@@ -21,23 +22,36 @@ export default function Hero() {
 
                     <p className="text-gray-400">
                         Currently working at meldCX with
-                        1.5+ years of experience.
+                        1.5+ years of experience
                     </p>
 
                     <div className="mt-8 flex gap-4">
 
                         <a
                             href="/resume.pdf"
-                            className="bg-sky-500 px-6 py-3 rounded-lg font-semibold"
+                            className="flex items-center gap-2 border border-sky-500 px-6 py-3 rounded-lg hover:bg-sky-500/10 transition"
                         >
                             Download Resume
                         </a>
 
                         <a
-                            href="#projects"
-                            className="border border-sky-500 px-6 py-3 rounded-lg"
+                            href="https://github.com/tanjidhasan41"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 border border-sky-500 px-6 py-3 rounded-lg hover:bg-sky-500/10 transition"
                         >
-                            Projects
+                            <FaGithub />
+                            GitHub
+                        </a>
+
+                        <a
+                            href="https://linkedin.com/in/tanjidhasan41"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 border border-sky-500 px-6 py-3 rounded-lg hover:bg-sky-500/10 transition"
+                        >
+                            <FaLinkedin />
+                            LinkedIn
                         </a>
 
                     </div>
