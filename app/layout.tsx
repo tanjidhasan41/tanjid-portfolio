@@ -14,7 +14,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Tanjid Ibna Akid | Software QA Engineer",
-  description: "Software QA Engineer specializing in Playwright, Selenium, Appium, API Testing and Performance Testing.",
+  description:
+    "Portfolio of Tanjid Ibna Akid, Software QA Engineer specializing in Automation Testing, Manual Testing, API Testing, Mobile Testing, Performance Testing, Playwright, Selenium, Appium and JMeter.",
+  keywords: [
+    "Software QA Engineer",
+    "Test Automation",
+    "Playwright",
+    "Selenium",
+    "Appium",
+    "TestNG",
+    "API Testing",
+    "Performance Testing",
+    "JMeter",
+    "QA Portfolio",
+    "SDET",
+  ],
 };
 
 export default function RootLayout({
