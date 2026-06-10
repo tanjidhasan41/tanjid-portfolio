@@ -20,7 +20,7 @@ export default function Hero() {
           </p>
 
           <p className="text-gray-400">
-            Currently working at meldCX with 1.5+ years of experience
+            Currently working at meldCX with 1.5+ years of experience in software quality assurance.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

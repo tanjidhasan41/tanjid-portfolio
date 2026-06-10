@@ -30,7 +30,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-slate-800 p-8 rounded-xl border border-slate-700">
+    <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300">
       <p className="text-slate-400 text-sm uppercase tracking-widest mb-6">Send a message</p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
