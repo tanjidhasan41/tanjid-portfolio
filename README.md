@@ -25,5 +25,5 @@ https://tanjid-portfolio-gamma.vercel.app
 
 ## Author
 
-Tanjid Ibna Akid
+Tanjid Ibna Akid  
 Software QA Engineer
