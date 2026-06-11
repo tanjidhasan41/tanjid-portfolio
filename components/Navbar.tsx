@@ -43,11 +43,10 @@ export default function Navbar() {
   const navItem = (id: string, label: string) => (
     <a
       href={`#${id}`}
-      className={`relative transition-colors text-sm ${
-        activeSection === id
+      className={`relative transition-colors text-sm ${activeSection === id
           ? "text-sky-400 font-semibold"
           : "text-gray-300 hover:text-sky-400"
-      }`}
+        }`}
       onClick={() => setMenuOpen(false)}
     >
       {label}

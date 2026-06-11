@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-[1.3fr_0.7fr] gap-10">
 
         <div>
-          <p className="text-violet-400 font-medium mb-2 tracking-wide">
+          <p className="text-violet-400 text-xl font-medium mb-2 tracking-wide animate-float">
             Software QA Engineer
           </p>
 
@@ -15,12 +15,27 @@ export default function Hero() {
             Tanjid Ibna Akid
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+          <p className="text-lg md:text-xl text-sky-400 mb-6 leading-relaxed">
             Automation Testing • Manual Testing • API Testing • Performance Testing
           </p>
 
-          <p className="text-gray-400">
-            Currently working at meldCX with 1.5+ years of experience in software quality assurance.
+          <p
+            className="
+              text-gray-400
+              transition-all
+              duration-500
+              hover:text-gray-300
+            "
+          >
+            Currently working at{" "}
+            <span className="text-sky-400 font-medium">
+              meldCX
+            </span>{" "}
+            with{" "}
+            <span className="text-violet-400 font-medium">
+              1.5+ years
+            </span>{" "}
+            of experience in Software Quality Assurance.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

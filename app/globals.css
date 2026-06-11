@@ -28,3 +28,21 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes floatText {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: floatText 3s ease-in-out infinite;
+}
