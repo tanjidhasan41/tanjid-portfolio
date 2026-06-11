@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center">
+    <section id="home" className="min-h-screen flex items-center pt-28 md:pt-0">
       <div className="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-[1.3fr_0.7fr] gap-10">
 
         <div>
