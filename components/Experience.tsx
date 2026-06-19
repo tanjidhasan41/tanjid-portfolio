@@ -34,7 +34,7 @@ export default function Experience() {
                 <span className="font-semibold text-white">
                   Test Planning & Execution:
                 </span>{" "}
-                Reviewed test plans and prepared multiple test cases per release cycle,
+                Review test plans and prepare multiple test cases per release cycle,
                 ensuring comprehensive coverage across functional and regression scenarios.
               </li>
 
@@ -42,7 +42,7 @@ export default function Experience() {
                 <span className="font-semibold text-white">
                   Android Testing:
                 </span>{" "}
-                Executed Android regression automation suites using Appium, covering
+                Execute Android regression automation suites using Appium, covering
                 25+ test scenarios and 170+ test cases across 3 devices.
               </li>
 
@@ -50,7 +50,7 @@ export default function Experience() {
                 <span className="font-semibold text-white">
                   Web Testing:
                 </span>{" "}
-                Performed manual testing for web applications and developed automated
+                Perform manual testing for web applications and develop automated
                 regression test scripts using Playwright, identifying around 16 issues.
               </li>
             </ul>
