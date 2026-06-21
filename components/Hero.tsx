@@ -11,11 +11,11 @@ export default function Hero() {
             Software QA Engineer
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Tanjid Ibna Akid
           </h1>
 
-          <p className="text-lg md:text-xl text-sky-400 mb-6 leading-relaxed">
+          <p className="text-base md:text-lg text-sky-400 mb-6 leading-relaxed">
             Automation Testing • Manual Testing • API Testing • Performance Testing
           </p>
 
