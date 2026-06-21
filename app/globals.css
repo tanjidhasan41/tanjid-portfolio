@@ -8,7 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-poppins);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -19,16 +19,16 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Floating Animation */
 @keyframes floatText {
   0% {
     transform: translateY(0px);
@@ -45,4 +45,21 @@ html {
 
 .animate-float {
   animation: floatText 3s ease-in-out infinite;
+}
+
+/* Optional Fade Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease forwards;
 }
