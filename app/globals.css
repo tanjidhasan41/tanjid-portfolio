@@ -78,3 +78,48 @@ body {
 section[id] {
   scroll-margin-top: 80px;
 }
+
+/* Spinning border card effect */
+.spin-card {
+  position: relative;
+  border: none !important;
+  background-clip: padding-box;
+}
+
+.spin-card::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    #38bdf8,
+    #818cf8,
+    #c084fc,
+    #38bdf8
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  animation: spin-border 3s linear infinite paused;
+}
+
+.spin-card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.spin-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin-border {
+  to { --angle: 360deg; }
+}

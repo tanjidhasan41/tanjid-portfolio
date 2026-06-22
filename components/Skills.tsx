@@ -1,24 +1,8 @@
 const skillGroups = [
-  {
-    category: "QA Automation",
-    icon: "✓",
-    skills: ["Playwright", "Selenium", "TestNG", "Cypress"],
-  },
-  {
-    category: "API & Performance",
-    icon: "</>",
-    skills: ["Rest Assured", "Mocha-Axios", "Postman", "JMeter"],
-  },
-  {
-    category: "Mobile & Tools",
-    icon: "⚙",
-    skills: ["Appium", "Git", "Jira", "SQL"],
-  },
-  {
-    category: "Languages",
-    icon: "{ }",
-    skills: ["Java", "JavaScript", "TypeScript"],
-  },
+  { category: "QA Automation", icon: "✓", skills: ["Playwright", "Selenium", "TestNG", "Cypress"] },
+  { category: "API & Performance", icon: "</>", skills: ["Rest Assured", "Mocha-Axios", "Postman", "JMeter"] },
+  { category: "Mobile & Tools", icon: "⚙", skills: ["Appium", "Git", "Jira", "SQL"] },
+  { category: "Languages", icon: "{ }", skills: ["Java", "JavaScript", "TypeScript"] },
 ];
 
 export default function Skills() {
@@ -29,25 +13,21 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {skillGroups.map((group, i) => (
-          <div
-            key={group.category}
-            className={`reveal delay-${i + 1} bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300`}
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-sky-400 font-mono font-bold text-sm bg-slate-700 px-2 py-1 rounded">
-                {group.icon}
-              </span>
-              <h3 className="text-base font-semibold text-white">{group.category}</h3>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {group.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="bg-slate-700/60 border border-slate-600 text-slate-300 px-3 py-1 rounded-full text-xs font-medium hover:border-sky-400/60 hover:text-sky-300 transition-all duration-200 cursor-default"
-                >
-                  {skill}
+          <div key={group.category} className={`reveal delay-${i + 1} spin-card bg-slate-800 rounded-xl hover:scale-[1.02] transition-all duration-300`}>
+            <div className="p-6 rounded-xl bg-slate-800">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-sky-400 font-mono font-bold text-sm bg-slate-700 px-2 py-1 rounded">
+                  {group.icon}
                 </span>
-              ))}
+                <h3 className="text-base font-semibold text-white">{group.category}</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span key={skill} className="bg-slate-700/60 border border-slate-600 text-slate-300 px-3 py-1 rounded-full text-xs font-medium hover:border-sky-400/60 hover:text-sky-300 transition-all duration-200 cursor-default">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}
