@@ -1,5 +1,5 @@
 const skillGroups = [
-  { category: "QA Automation", icon: "✓", skills: ["Playwright", "Selenium", "TestNG", "Cypress"] },
+  { category: "QA Automation", icon: "✓", skills: ["Playwright", "Selenium", "TestNG", "WebDriverIO"] },
   { category: "API & Performance", icon: "</>", skills: ["Rest Assured", "Mocha-Axios", "Postman", "JMeter"] },
   { category: "Mobile & Tools", icon: "⚙", skills: ["Appium", "Git", "Jira", "SQL"] },
   { category: "Languages", icon: "{ }", skills: ["Java", "JavaScript", "TypeScript"] },
