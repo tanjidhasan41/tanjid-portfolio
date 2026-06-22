@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { FaBriefcase } from "react-icons/fa";
 
 const experiences = [
   {
@@ -108,19 +109,17 @@ export default function Experience() {
               className="relative pl-10"
             >
               <div
-                className={`absolute left-0 top-5 w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                  exp.active
+                className={`absolute left-0 top-5 w-6 h-6 rounded-full border-2 flex items-center justify-center ${exp.active
                     ? "border-sky-400 bg-sky-400/20"
                     : "border-slate-500 bg-slate-800"
-                }`}
+                  }`}
               >
                 <div
                   className={`
                     w-2 h-2 rounded-full
-                    ${
-                      exp.active
-                        ? "bg-sky-400 timeline-pulse"
-                        : "bg-slate-500"
+                    ${exp.active
+                      ? "bg-sky-400 timeline-pulse"
+                      : "bg-slate-500"
                     }
                   `}
                 />
@@ -137,17 +136,17 @@ export default function Experience() {
                         {exp.title}
                       </h3>
 
-                      <p className="text-sky-400 font-semibold text-sm mt-1">
+                      <p className="flex items-center gap-1.5 text-sky-400 font-semibold text-sm mt-1">
+                        <FaBriefcase className="text-sky-400 text-xs" />
                         {exp.company}
                       </p>
                     </div>
 
                     <span
-                      className={`mt-2 md:mt-0 text-xs px-3 py-1 rounded-full self-start border flex items-center gap-1.5 ${
-                        exp.active
+                      className={`mt-2 md:mt-0 text-xs px-3 py-1 rounded-full self-start border flex items-center gap-1.5 ${exp.active
                           ? "bg-violet-500/10 border-violet-500/30 text-violet-300"
                           : "bg-slate-700 border-slate-600 text-slate-300"
-                      }`}
+                        }`}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -176,9 +175,14 @@ export default function Experience() {
                     </span>
                   </div>
 
-                  <p className="text-xs font-semibold text-sky-300/80 mb-5 uppercase tracking-wider">
-                    {exp.industry}
-                  </p>
+                  <div className="flex items-center gap-2 mb-5">
+                    <span className="text-xs text-slate-500 uppercase tracking-wider font-medium">
+                      Domains Covered:
+                    </span>
+                    <span className="text-xs font-semibold text-sky-300/80 uppercase tracking-wider">
+                      {exp.industry}
+                    </span>
+                  </div>
 
                   <ul className="space-y-3">
                     {exp.bullets.map((b) => (

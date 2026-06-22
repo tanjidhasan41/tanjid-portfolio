@@ -123,7 +123,7 @@ section[id] {
 @keyframes spin-border {
   to { --angle: 360deg; }
 }
-css
+
 /* =========================================
    Experience Timeline Animation
 ========================================= */
