@@ -1,10 +1,15 @@
+"use client";
+import { useReveal } from "../hooks/useReveal";
+
 export default function About() {
+  const ref = useReveal();
+
   return (
-    <section id="about" className="py-14">
+    <section id="about" className="py-14" ref={ref}>
       <h2 className="text-3xl font-bold mb-2 text-white">About Me</h2>
       <div className="w-14 h-1 bg-gradient-to-r from-sky-400 to-violet-500 rounded-full mb-6" />
 
-      <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300">
+      <div className="reveal bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300">
         <p className="text-gray-300 leading-7 text-sm">
           I got into QA because I genuinely enjoy breaking things in a
           controlled way. Over the past 1.5+ years at AKIJ iBOS and

@@ -1,3 +1,6 @@
+"use client";
+import { useReveal } from "../hooks/useReveal";
+
 const experiences = [
   {
     title: "Junior Software QA Engineer",
@@ -44,33 +47,27 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const ref = useReveal();
+
   return (
-    <section id="experience" className="py-14">
+    <section id="experience" className="py-14" ref={ref}>
       <h2 className="text-3xl font-bold text-white mb-2">Experience</h2>
       <div className="w-14 h-1 bg-gradient-to-r from-sky-400 to-violet-500 rounded-full mb-8" />
 
       <div className="relative">
-        {/* Vertical timeline line */}
         <div className="absolute left-3 top-2 bottom-2 w-px bg-slate-700" />
 
         <div className="space-y-6">
-          {experiences.map((exp) => (
+          {experiences.map((exp, i) => (
             <div key={exp.company} className="relative pl-10">
-              {/* Timeline dot */}
               <div
                 className={`absolute left-0 top-5 w-6 h-6 rounded-full border-2 flex items-center justify-center
-                  ${exp.active
-                    ? "border-sky-400 bg-sky-400/20"
-                    : "border-slate-500 bg-slate-800"
-                  }`}
+                  ${exp.active ? "border-sky-400 bg-sky-400/20" : "border-slate-500 bg-slate-800"}`}
               >
-                <div
-                  className={`w-2 h-2 rounded-full ${exp.active ? "bg-sky-400" : "bg-slate-500"}`}
-                />
+                <div className={`w-2 h-2 rounded-full ${exp.active ? "bg-sky-400" : "bg-slate-500"}`} />
               </div>
 
-              {/* Card */}
-              <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.01] transition-all duration-300">
+              <div className={`reveal delay-${i + 1} bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.01] transition-all duration-300`}>
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
                     <h3 className="text-lg font-bold text-white">{exp.title}</h3>
