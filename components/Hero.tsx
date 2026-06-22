@@ -3,42 +3,28 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-28 md:pt-0">
-      <div className="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-[1.3fr_0.7fr] gap-10">
+    <section
+      id="home"
+      className="min-h-screen flex items-center pt-28 md:pt-0"
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-[1.45fr_0.55fr] gap-12">
 
+        {/* Left Side */}
         <div>
           <p className="text-violet-400 text-xl font-medium mb-2 tracking-wide animate-float">
             Software QA Engineer
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
             Tanjid Ibna Akid
           </h1>
 
-          <p className="text-base md:text-lg text-sky-400 mb-6 leading-relaxed">
+          <p className="text-lg text-sky-400 mb-8 leading-relaxed">
             Automation Testing • Manual Testing • API Testing • Performance Testing
           </p>
 
-          <p
-            className="
-              text-gray-400
-              transition-all
-              duration-500
-              hover:text-gray-300
-            "
-          >
-            Currently working at{" "}
-            <span className="text-sky-400 font-medium">
-              meldCX
-            </span>{" "}
-            with{" "}
-            <span className="text-violet-400 font-medium">
-              1.5+ years
-            </span>{" "}
-            of experience in Software Quality Assurance.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4">
             <a
               href="/resume.pdf"
               className="flex items-center gap-2 bg-gradient-to-r from-sky-500 to-violet-600 hover:from-sky-400 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105"
@@ -66,16 +52,69 @@ export default function Hero() {
               LinkedIn
             </a>
           </div>
+
+          {/* Stats */}
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+            <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 text-center hover:border-sky-400/50 hover:-translate-y-1 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-sky-400">
+                1.5+
+              </h3>
+              <p className="text-sm text-gray-400 mt-1">
+                Years Experience
+              </p>
+            </div>
+
+            <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 text-center hover:border-violet-400/50 hover:-translate-y-1 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-violet-400">
+                13+
+              </h3>
+              <p className="text-sm text-gray-400 mt-1">
+                Automation Projects
+              </p>
+            </div>
+
+            <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 text-center hover:border-sky-400/50 hover:-translate-y-1 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-sky-400">
+                400+
+              </h3>
+              <p className="text-sm text-gray-400 mt-1">
+                Test Cases Automated
+              </p>
+            </div>
+
+          </div>
         </div>
 
-        <div className="flex justify-center md:justify-end">
-          <Image
-            src="/profile.jpg"
-            width={260}
-            height={260}
-            alt="profile"
-            className="rounded-full border-4 border-sky-400 w-64 h-64 md:w-[275px] md:h-[275px] hover:scale-105 transition-all duration-300"
-          />
+        {/* Right Side */}
+        <div className="flex justify-center md:justify-end items-center md:translate-x-6">
+
+          <div className="relative">
+
+            <div className="absolute inset-0 bg-sky-500/20 blur-3xl rounded-full" />
+
+            <Image
+              src="/profile.jpg"
+              width={220}
+              height={220}
+              alt="profile"
+              className="
+                relative
+                rounded-full
+                object-cover
+                border-4
+                border-sky-400
+                shadow-[0_0_40px_rgba(56,189,248,0.25)]
+                w-[220px]
+                h-[220px]
+                hover:scale-105
+                transition-all
+                duration-500
+              "
+            />
+
+          </div>
+
         </div>
 
       </div>

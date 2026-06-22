@@ -26,6 +26,9 @@ export default function Home() {
         <Contact />
       </main>
 
+      {/* Extra space before footer */}
+      <div className="h-32" />
+
       <Footer />
       <ScrollToTop />
     </>

@@ -28,8 +28,8 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="spin-card bg-slate-800 rounded-xl hover:scale-[1.02] transition-all duration-300">
-      <div className="p-6 rounded-xl bg-slate-800">
+    <div className="spin-card bg-slate-800 rounded-xl hover:scale-[1.02] transition-all duration-300 h-full">
+      <div className="p-6 rounded-xl bg-slate-800 h-full">
         <p className="text-slate-400 text-xs uppercase tracking-widest mb-4">Send a message</p>
         <form onSubmit={handleSubmit} className="space-y-3">
           <input type="text" name="name" placeholder="Your name" value={form.name} onChange={handleChange} required
