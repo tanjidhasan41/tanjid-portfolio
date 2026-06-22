@@ -71,10 +71,10 @@ export default function Experience() {
 
               {/* Card */}
               <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.01] transition-all duration-300">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
                     <h3 className="text-lg font-bold text-white">{exp.title}</h3>
-                    <p className="text-sky-400 font-semibold text-sm mt-0.5">{exp.company}</p>
+                    <p className="text-sky-400 font-semibold text-sm mt-1">{exp.company}</p>
                   </div>
                   <span
                     className={`mt-2 md:mt-0 text-xs px-3 py-1 rounded-full self-start border flex items-center gap-1.5
@@ -93,7 +93,7 @@ export default function Experience() {
                   </span>
                 </div>
 
-                <p className="text-xs font-semibold text-sky-300/80 mb-3 uppercase tracking-wider">
+                <p className="text-xs font-semibold text-sky-300/80 mb-5 uppercase tracking-wider">
                   {exp.industry}
                 </p>
 
