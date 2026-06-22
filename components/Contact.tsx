@@ -1,18 +1,14 @@
-"use client";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import ContactForm from "./ContactForm";
-import { useReveal } from "../hooks/useReveal";
 
 export default function Contact() {
-  const ref = useReveal();
-
   return (
-    <section id="contact" className="py-14" ref={ref}>
+    <section id="contact" className="py-14">
       <h2 className="text-3xl font-bold text-white mb-2">Contact</h2>
       <div className="w-14 h-1 bg-gradient-to-r from-sky-400 to-violet-500 rounded-full mb-8" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="reveal from-left delay-1 bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300 h-fit">
+        <div className="reveal delay-1 bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300 h-fit">
           <p className="text-slate-400 text-xs uppercase tracking-widest">Reach me at</p>
 
           <p className="flex items-center gap-3 text-sm">
@@ -24,30 +20,20 @@ export default function Contact() {
 
           <p className="flex items-center gap-3 text-sm">
             <FaLinkedin className="text-sky-400" />
-            <a
-              href="https://linkedin.com/in/tanjidhasan41"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-sky-400 transition"
-            >
+            <a href="https://linkedin.com/in/tanjidhasan41" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition">
               linkedin.com/in/tanjidhasan41
             </a>
           </p>
 
           <p className="flex items-center gap-3 text-sm">
             <FaGithub className="text-sky-400" />
-            <a
-              href="https://github.com/tanjidhasan41"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-sky-400 transition"
-            >
+            <a href="https://github.com/tanjidhasan41" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition">
               github.com/tanjidhasan41
             </a>
           </p>
         </div>
 
-        <div className="reveal from-right delay-2">
+        <div className="reveal delay-2">
           <ContactForm />
         </div>
       </div>

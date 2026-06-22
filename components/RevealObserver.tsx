@@ -1,14 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
-export function useReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-
+export default function RevealObserver() {
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -17,14 +12,14 @@ export function useReveal() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.1 }
     );
 
-    const cards = el.querySelectorAll(".reveal");
-    cards.forEach((card) => observer.observe(card));
+    const elements = document.querySelectorAll(".reveal");
+    elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
-  return ref;
+  return null;
 }

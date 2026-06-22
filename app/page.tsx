@@ -8,11 +8,13 @@ import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
+import RevealObserver from "../components/RevealObserver";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <RevealObserver />
 
       <main className="max-w-6xl mx-auto px-4 md:px-6">
         <Hero />
@@ -25,7 +27,6 @@ export default function Home() {
       </main>
 
       <Footer />
-
       <ScrollToTop />
     </>
   );
