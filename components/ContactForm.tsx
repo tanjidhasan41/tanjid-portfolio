@@ -30,10 +30,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300">
-      <p className="text-slate-400 text-sm uppercase tracking-widest mb-6">Send a message</p>
+    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300">
+      <p className="text-slate-400 text-xs uppercase tracking-widest mb-4">Send a message</p>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-3">
         <input
           type="text"
           name="name"
@@ -41,7 +41,7 @@ export default function ContactForm() {
           value={form.name}
           onChange={handleChange}
           required
-          className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition"
+          className="w-full bg-slate-700 border border-slate-600 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition"
         />
         <input
           type="email"
@@ -50,7 +50,7 @@ export default function ContactForm() {
           value={form.email}
           onChange={handleChange}
           required
-          className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition"
+          className="w-full bg-slate-700 border border-slate-600 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition"
         />
         <textarea
           name="message"
@@ -59,23 +59,23 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={4}
-          className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition resize-none"
+          className="w-full bg-slate-700 border border-slate-600 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition resize-none"
         />
         <button
           type="submit"
           disabled={status === "sending"}
-          className="w-full bg-gradient-to-r from-sky-500 to-violet-600 hover:from-sky-400 hover:to-violet-500 disabled:from-slate-600 disabled:to-slate-600 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-[1.02]"
+          className="w-full bg-gradient-to-r from-sky-500 to-violet-600 hover:from-sky-400 hover:to-violet-500 disabled:from-slate-600 disabled:to-slate-600 disabled:cursor-not-allowed text-white font-semibold py-2.5 rounded-lg text-sm transition-all duration-300 hover:scale-[1.02]"
         >
           {status === "sending" ? "Sending..." : "Send Message"}
         </button>
 
         {status === "sent" && (
-          <p className="text-green-400 text-sm text-center">
+          <p className="text-green-400 text-xs text-center">
             Message sent! I&apos;ll get back to you soon.
           </p>
         )}
         {status === "error" && (
-          <p className="text-red-400 text-sm text-center">
+          <p className="text-red-400 text-xs text-center">
             Something went wrong. Please try emailing directly.
           </p>
         )}

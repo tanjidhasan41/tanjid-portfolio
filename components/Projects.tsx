@@ -53,25 +53,24 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20">
-      <h2 className="text-4xl font-bold text-white mb-2">Featured Projects</h2>
-      <div className="w-16 h-1 bg-gradient-to-r from-sky-400 to-violet-500 rounded-full mb-10" />
+    <section id="projects" className="py-14">
+      <h2 className="text-3xl font-bold text-white mb-2">Featured Projects</h2>
+      <div className="w-14 h-1 bg-gradient-to-r from-sky-400 to-violet-500 rounded-full mb-8" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-400 hover:scale-[1.03] transition-all duration-300 flex flex-col"
+            className="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-sky-400 hover:scale-[1.02] transition-all duration-300 flex flex-col"
           >
-            <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+            <h3 className="text-base font-semibold mb-2 text-white">{project.title}</h3>
+            <p className="text-gray-400 text-sm mb-3 flex-1 leading-6">{project.description}</p>
 
-            <p className="text-gray-400 mb-4 flex-1">{project.description}</p>
-
-            <div className="flex flex-wrap gap-2 mb-5">
+            <div className="flex flex-wrap gap-1.5 mb-4">
               {project.tech.map((item) => (
                 <span
                   key={item}
-                  className="bg-violet-500/10 border border-violet-500/30 text-violet-300 px-3 py-1 rounded-full text-xs font-medium"
+                  className="bg-violet-500/10 border border-violet-500/30 text-violet-300 px-2.5 py-0.5 rounded-full text-xs font-medium"
                 >
                   {item}
                 </span>
@@ -82,7 +81,7 @@ export default function Projects() {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 self-start"
+              className="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-white px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 hover:scale-105 self-start"
             >
               View Repository →
             </a>

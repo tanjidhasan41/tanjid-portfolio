@@ -1,114 +1,108 @@
+const experiences = [
+  {
+    title: "Junior Software QA Engineer",
+    company: "meldCX",
+    period: "October 2025 – Present",
+    industry: "Enterprise SaaS • FinTech",
+    active: true,
+    bullets: [
+      {
+        label: "Test Planning & Execution",
+        text: "Review test plans and prepare multiple test cases per release cycle, ensuring comprehensive coverage across functional and regression scenarios.",
+      },
+      {
+        label: "Android Testing",
+        text: "Execute Android regression automation suites using Appium, covering 25+ test scenarios and 170+ test cases across 3 devices.",
+      },
+      {
+        label: "Web Testing",
+        text: "Perform manual testing for web applications and develop automated regression test scripts using Playwright, identifying around 16 issues.",
+      },
+    ],
+  },
+  {
+    title: "Junior Software QA Engineer",
+    company: "AKIJ iBOS",
+    period: "November 2024 – September 2025",
+    industry: "Online Travel Agency • E-commerce",
+    active: false,
+    bullets: [
+      {
+        label: "Manual Testing",
+        text: "Ensured release-ready quality for a Shopify theme through functional, UI, and cross-browser testing across product, cart, and checkout workflows.",
+      },
+      {
+        label: "Automation Testing",
+        text: "Built the automation structure and initial test scripts for a Travel & Booking Platform, enabling repeatable regression testing from scratch.",
+      },
+      {
+        label: "End-to-End Testing",
+        text: "Owned end-to-end testing of the complex Pop-up Form feature in the Form Builder application, covering functional, regression, and edge-case scenarios through to delivery.",
+      },
+    ],
+  },
+];
+
 export default function Experience() {
   return (
-    <section id="experience" className="py-20">
-      <h2 className="text-4xl font-bold text-white mb-2">Experience</h2>
-      <div className="w-16 h-1 bg-gradient-to-r from-sky-400 to-violet-500 rounded-full mb-10" />
+    <section id="experience" className="py-14">
+      <h2 className="text-3xl font-bold text-white mb-2">Experience</h2>
+      <div className="w-14 h-1 bg-gradient-to-r from-sky-400 to-violet-500 rounded-full mb-8" />
 
-      <div className="space-y-10">
+      <div className="relative">
+        {/* Vertical timeline line */}
+        <div className="absolute left-3 top-2 bottom-2 w-px bg-slate-700" />
 
-        {/* meldCX */}
-        <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold">
-                Junior Software QA Engineer
-              </h3>
-              <p className="text-sky-400 text-lg font-semibold mt-1">meldCX</p>
+        <div className="space-y-6">
+          {experiences.map((exp) => (
+            <div key={exp.company} className="relative pl-10">
+              {/* Timeline dot */}
+              <div
+                className={`absolute left-0 top-5 w-6 h-6 rounded-full border-2 flex items-center justify-center
+                  ${exp.active
+                    ? "border-sky-400 bg-sky-400/20"
+                    : "border-slate-500 bg-slate-800"
+                  }`}
+              >
+                <div
+                  className={`w-2 h-2 rounded-full ${exp.active ? "bg-sky-400" : "bg-slate-500"}`}
+                />
+              </div>
+
+              {/* Card */}
+              <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.01] transition-all duration-300">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                  <div>
+                    <h3 className="text-lg font-bold text-white">{exp.title}</h3>
+                    <p className="text-sky-400 font-semibold text-sm mt-0.5">{exp.company}</p>
+                  </div>
+                  <span
+                    className={`mt-2 md:mt-0 text-xs px-3 py-1 rounded-full self-start border
+                      ${exp.active
+                        ? "bg-violet-500/10 border-violet-500/30 text-violet-300"
+                        : "bg-slate-700 border-slate-600 text-slate-300"
+                      }`}
+                  >
+                    {exp.period}
+                  </span>
+                </div>
+
+                <p className="text-xs font-semibold text-sky-300/80 mb-3 uppercase tracking-wider">
+                  {exp.industry}
+                </p>
+
+                <ul className="space-y-3">
+                  {exp.bullets.map((b) => (
+                    <li key={b.label} className="flex gap-2 text-sm text-gray-300 leading-6">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-400/60 flex-shrink-0" />
+                      <span>{b.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <span className="mt-2 md:mt-0 text-sm bg-violet-500/10 border border-violet-500/30 text-violet-300 px-3 py-1 rounded-full self-start">
-              October 2025 – Present
-            </span>
-          </div>
-
-          <div className="space-y-6">
-            <h4 className="text-base font-semibold text-slate-400 uppercase tracking-widest">
-              Projects Worked On
-            </h4>
-
-            <p className="text-lg font-semibold text-sky-300">
-              Enterprise SaaS • FinTech
-            </p>
-
-            <ul className="list-disc pl-6 space-y-4 text-gray-300">
-              <li>
-                <span className="font-semibold text-white">
-                  Test Planning & Execution:
-                </span>{" "}
-                Review test plans and prepare multiple test cases per release cycle,
-                ensuring comprehensive coverage across functional and regression scenarios.
-              </li>
-
-              <li>
-                <span className="font-semibold text-white">
-                  Android Testing:
-                </span>{" "}
-                Execute Android regression automation suites using Appium, covering
-                25+ test scenarios and 170+ test cases across 3 devices.
-              </li>
-
-              <li>
-                <span className="font-semibold text-white">
-                  Web Testing:
-                </span>{" "}
-                Perform manual testing for web applications and develop automated
-                regression test scripts using Playwright, identifying around 16 issues.
-              </li>
-            </ul>
-          </div>
+          ))}
         </div>
-
-        {/* AKIJ iBOS */}
-        <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold">
-                Junior Software QA Engineer
-              </h3>
-              <p className="text-sky-400 text-lg font-semibold mt-1">AKIJ iBOS</p>
-            </div>
-            <span className="mt-2 md:mt-0 text-sm bg-slate-700 border border-slate-600 text-slate-300 px-3 py-1 rounded-full self-start">
-              November 2024 – September 2025
-            </span>
-          </div>
-
-          <div className="space-y-6">
-            <h4 className="text-base font-semibold text-slate-400 uppercase tracking-widest">
-              Projects Worked On
-            </h4>
-
-            <p className="text-lg font-semibold text-sky-300">
-              Online Travel Agency • E-commerce
-            </p>
-
-            <ul className="list-disc pl-6 space-y-4 text-gray-300">
-              <li>
-                <span className="font-semibold text-white">
-                  Manual Testing:
-                </span>{" "}
-                Ensured release-ready quality for a Shopify theme through functional,
-                UI, and cross-browser testing across product, cart, and checkout workflows.
-              </li>
-
-              <li>
-                <span className="font-semibold text-white">
-                  Automation Testing:
-                </span>{" "}
-                Built the automation structure and initial test scripts for a Travel &
-                Booking Platform, enabling repeatable regression testing from scratch.
-              </li>
-
-              <li>
-                <span className="font-semibold text-white">
-                  End-to-End Testing:
-                </span>{" "}
-                Owned end-to-end testing of the complex Pop-up Form feature in the Form
-                Builder application, covering functional, regression, and edge-case
-                scenarios through to delivery.
-              </li>
-            </ul>
-          </div>
-        </div>
-
       </div>
     </section>
   );
