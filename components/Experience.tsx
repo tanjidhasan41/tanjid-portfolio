@@ -8,7 +8,7 @@ const experiences = [
     title: "Junior Software QA Engineer",
     company: "meldCX",
     period: "October 2025 – Present",
-    industry: "Enterprise SaaS • FinTech",
+    industry: "Cloud Computing (PaaS) • FinTech",
     active: true,
     bullets: [
       {
