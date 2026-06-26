@@ -17,7 +17,7 @@ const experiences = [
       },
       {
         label: "b",
-        text: "Execute Android regression automation suites using Appium, covering 25+ test scenarios and 170+ test cases across 3 devices.",
+        text: "Execute Android regression automation suites using Appium, covering 25+ test scenarios and 180+ test cases across 3 devices.",
       },
       {
         label: "c",
